@@ -10,15 +10,24 @@ body {
     align-items: center;
 }
 
-label {
-    display: flex;
-    width: 120px;
-    align-items: center;
-    
+span {
+    color: white;
 }
 
 div {
     display: flex;
+}
+label {
+    display: flex;
+    width: 320px;
+    align-items: center;
+    
+} 
+
+
+
+/* div {
+    display: block;
     border-radius: 20px;
     justify-content: space-between;
     background: #231f20;
@@ -27,5 +36,3 @@ div {
     font-size: 16px;
     width: 320px;
  
-
-}
