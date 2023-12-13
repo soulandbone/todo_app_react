@@ -27,29 +27,18 @@ export default function Todo({todo, handleUpdateTodo, handleDeleteTodo}){
   
     return(
       <li>
-     
-          <label htmlFor={todo.id}>
-            <div>
-              <input 
-              type="checkbox"
-              id={todo.id}
-              checked= {todo.completed}
-              onChange={handleCheckboxClick}
-            
-              />
-            </div>
-            {isEditing? <input 
-              type="text"
-              value= {todo.label}
-              onChange={handleEditTodo}
+        <div className="todo-item" key={todo.id}>
+            <input 
+            type="checkbox" 
+            checked={todo.completed } 
+            onChange={handleCheckboxClick}
+            />
+            <span className="todo-text">{todo.label}</span>
+            <button className="edit-btn">Edit</button>
+            <button className="delete-btn" onClick={handleDeleteClick}>Delete</button>
+        </div>
 
-              
-            
-              />: <span>{todo.label}</span> }
-           
-          {<button onClick={handleEditClick}>{isEditing ? "Save":"Edit"}</button> }
-          <button onClick={handleDeleteClick}>Delete</button>
-          </label>   
+
   
       </li>
      

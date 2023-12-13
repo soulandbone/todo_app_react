@@ -2,27 +2,47 @@
     box-sizing: border-box;
 }
 
+
 body {
+    display: flex;
     background-color:#121212;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
+ 
+
+}
+.todo-list {
+    display: flex;
+    background-color: aqua;
+    flex-direction: column;
+    align-items:center;
+    width: 100%;
 }
 
-span {
-    color: white;
+
+.todo-item {
+
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: bottom;
+    background-color: red;
+    padding: 10px;
+    margin: 5px 0;
+     /* Adjust the width as per your requirement */
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-div {
-    display: flex;
+.todo-text {
+    flex-grow: 1;
+    margin: 0 10px;
 }
-label {
-    display: flex;
-    width: 320px;
-    align-items: center;
-    
-} 
+
+.edit-btn, .delete-btn {
+    margin: 0 5px;
+}
 
 
 

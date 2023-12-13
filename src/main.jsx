@@ -39,8 +39,8 @@ const handleDeleteTodo = (id) => {
 
 
 return (
-  <ul>
-    <TodoComposer handleAddTodo={handleAddTodo}/>
+  <div className='todo-list'>
+    {/* <TodoComposer handleAddTodo={handleAddTodo}/> */}
     {todos.map((todo) => {
       return <Todo 
       key={todo.id}
@@ -52,7 +52,7 @@ return (
     }
     )}
     
-  </ul>
+  </div>
 
 )
 
