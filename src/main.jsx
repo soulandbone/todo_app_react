@@ -30,12 +30,17 @@ const handleDeleteTodo = (id) => {
   setTodos(newTodos);
   }
 
+  const handleAddTodo = (todo) =>{
+    const newTodos = [...todos, todo];
+    setTodos(newTodos);
+  }
+
 
 
 
 return (
   <ul>
-    <TodoComposer/>
+    <TodoComposer handleAddTodo={handleAddTodo}/>
     {todos.map((todo) => {
       return <Todo 
       key={todo.id}
