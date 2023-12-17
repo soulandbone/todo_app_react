@@ -5,7 +5,7 @@
 
 body {
     display: flex;
-    background-color:#121212;
+    background-color: #121212;
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ body {
 }
 .todo-list {
     display: flex;
-    background-color: aqua;
+
     flex-direction: column;
     align-items:center;
     width: 100%;
@@ -27,23 +27,55 @@ body {
     display: flex;
     justify-content: center;
     align-items: bottom;
-    background-color: red;
+    background-color: rgb(41, 43, 191);
     padding: 10px;
     margin: 5px 0;
      /* Adjust the width as per your requirement */
     border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+input[type="checkbox"]{
+    display: visible
+}
+
+.checkbox-round{
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%; /* This creates the round shape */
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + .checkbox-round {
+    background-color: #4CAF50; /* Change color when checked */
+}
 
 .todo-text {
     flex-grow: 1;
     margin: 0 10px;
+    color: white;
 }
 
 .edit-btn, .delete-btn {
     margin: 0 5px;
 }
 
+
+.custom-checkbox input[type="checkbox"]:checked + .checkbox-round::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
 /* div {

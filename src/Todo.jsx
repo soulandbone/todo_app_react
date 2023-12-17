@@ -28,11 +28,15 @@ export default function Todo({todo, handleUpdateTodo, handleDeleteTodo}){
     return(
       <li>
         <div className="todo-item" key={todo.id}>
-            <input 
+          <label className="custom-checkbox">
+          <input 
             type="checkbox" 
             checked={todo.completed } 
             onChange={handleCheckboxClick}
             />
+            <span className='checkbox-round'></span>
+          </label>
+          
             <span className="todo-text">{todo.label}</span>
             <button className="edit-btn">Edit</button>
             <button className="delete-btn" onClick={handleDeleteClick}>Delete</button>
